@@ -12,7 +12,9 @@ class Station
   end
 
   def fuel_type
-    @data[:fuel_type_code]
+    code = @data[:fuel_type_code]
+    return "Electric" if code = "ELEC"
+    return "Propane"  if code = "LPG"
   end
 
   def access_times
