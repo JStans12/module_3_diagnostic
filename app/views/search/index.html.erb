@@ -3,9 +3,10 @@
     <h1>Nearest Alt Fuel Stations</h1>
     <% @stations.each do |station| %>
       <h3><%= station.station_name %></h3>
-      <p><%= station.street_address %></p>
-      <p><%= station.fuel_types %></p>
-      <p><%= station.access_days_time %></p>
+      <p>Address: <%= station.street_address %></p>
+      <p>Fuel Types: <%= station.fuel_type_code %></p>
+      <p>Access Times: <%= station.access_days_time %></p>
+      <p>Distance: <%= station.distance %></p>
       <br>
     <% end %>
   </div>

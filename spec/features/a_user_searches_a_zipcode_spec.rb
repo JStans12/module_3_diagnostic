@@ -8,6 +8,8 @@ describe "a user navigates to the root and searches for a zipcode" do
     click_on('Locate')
 
     expect(page).to have_content("Nearest Alt Fuel Stations")
-    # some other expectations
+    expect(page).to have_content("Address: 800 Acoma St")
+    expect(page).to have_content("Access Times: 24 hours daily; pay lot")
+    expect(page).to have_content("City of Denver - Denver Justice Center Garage")
   end
 end
