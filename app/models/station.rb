@@ -1,6 +1,7 @@
 class Station
   def initialize(data)
     @data = data
+    @fuel_type_codes = {"ELEC": "Electric", "LPG": "Propane"}
   end
 
   def name
@@ -13,8 +14,7 @@ class Station
 
   def fuel_type
     code = @data[:fuel_type_code]
-    return "Electric" if code = "ELEC"
-    return "Propane"  if code = "LPG"
+    @fuel_type_codes[code.to_sym]
   end
 
   def access_times
