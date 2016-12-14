@@ -1,0 +1,12 @@
+<div class="container"
+  <div class="jumbotron">
+    <h1>Nearest Alt Fuel Stations</h1>
+    <% @stations.each do |station| %>
+      <h3><%= station.station_name %></h3>
+      <p><%= station.street_address %></p>
+      <p><%= station.fuel_types %></p>
+      <p><%= station.access_days_time %></p>
+      <br>
+    <% end %>
+  </div>
+</div>
