@@ -2,10 +2,10 @@
   <div class="jumbotron">
     <h1>Nearest Alt Fuel Stations</h1>
     <% @stations.each do |station| %>
-      <h3><%= station.station_name %></h3>
-      <p>Address: <%= station.street_address %></p>
-      <p>Fuel Types: <%= station.fuel_type_code %></p>
-      <p>Access Times: <%= station.access_days_time %></p>
+      <h3><%= station.name %></h3>
+      <p>Address: <%= station.address %></p>
+      <p>Fuel Types: <%= station.fuel_type %></p>
+      <p>Access Times: <%= station.access_times %></p>
       <p>Distance: <%= station.distance %></p>
       <br>
     <% end %>
