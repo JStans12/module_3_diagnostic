@@ -1,13 +1,18 @@
-<div class="container"
+<div class="container">
   <div class="jumbotron">
-    <h1>Nearest Alt Fuel Stations</h1>
-    <% @stations.each do |station| %>
-      <h3><%= station.name %></h3>
-      <p>Address: <%= station.address %></p>
-      <p>Fuel Types: <%= station.fuel_type %></p>
-      <p>Access Times: <%= station.access_times %></p>
-      <p>Distance: <%= station.distance %> miles</p>
+    <h1>Nearest Alternative Fuel Stations</h1>
+    <table class="table">
+      <th>Name</th><th>Address</th><th>Fuel Type</th><th>Access Times</th><th>Distance</th>
       <br>
-    <% end %>
+      <% @stations.each do |station| %>
+        <tr>
+          <td class="col-md-4"><h5><%= station.name %></h5></td>
+          <td class="col-md-2"><%= station.address %></td>
+          <td class="col-md-1"><%= station.fuel_type %></td>
+          <td class="col-md-3"><%= station.access_times %></td>
+          <td class="col-md-2"><%= station.distance %> miles</td>
+        </tr>
+      <% end %>
+    </table>
   </div>
 </div>
